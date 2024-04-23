@@ -37,6 +37,7 @@ response
  <div class="card-body">
  <div class="card-text text-center">
  Region:${result[i].region}</div>
+ 
  <div class="card-text text-center">
  Capital:${result[i].capital}</div>
  
@@ -46,7 +47,7 @@ response
  </div>
 
  </div>
-   
+  
  `;
       row.append(col);
     }
@@ -65,7 +66,7 @@ response
         let weatherApi = fetch(
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=075aa353e2d7988db8bd662b05662116`
         );
-        //   
+        // console.log(weatherApi);
         weatherApi
           .then((data1) => data1.json())
           .then((res) => {
